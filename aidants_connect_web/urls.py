@@ -38,6 +38,11 @@ urlpatterns = [
         usagers.confirm_mandat_cancelation,
         name="confirm_mandat_cancelation",
     ),
+    path(
+        "mandats/<int:mandat_id>/attestation_de_revocation",
+        usagers.mandat_cancellation_attestation,
+        name="mandat_cancellation_attestation",
+    ),
     # new mandat
     path("creation_mandat/", new_mandat.new_mandat, name="new_mandat"),
     path(
